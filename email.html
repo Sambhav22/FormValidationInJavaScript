@@ -1,0 +1,40 @@
+<html>
+<head />
+<body>
+<script>
+	function fun()
+	{
+var x=document.getElementById("email").value;
+
+if(x=="")
+{
+document.getElementById("span1").innerHTML="please enter your email id";
+return false;
+}
+if(x.indexOf('@')<=0)
+{
+	document.getElementById("span1").innerHTML="position of @ is not valid";
+	return false;
+}
+if((x.charAt(x.length-4)!='.')&&(x.charAt(x.length-3)!='.'))
+{
+
+document.getElementById("span1").innerHTML="position of . is not valid";
+	return false;
+
+}
+}
+
+
+
+
+</script>
+<h2>email
+<form onsubmit="return fun()">
+<input type="text" id="email">
+<span id="span1" style="color:red"></span>
+<br>
+<input type="submit" id="button">
+<form>
+</body>
+</html>
